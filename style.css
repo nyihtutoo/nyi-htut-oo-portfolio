@@ -80,3 +80,71 @@ details p{margin:0;padding:0 45px 19px 62px;max-width:76ch;color:var(--muted)}
   summary{grid-template-columns:22px 1fr 32px;gap:8px;padding-inline:8px}
   details p{padding-left:38px;padding-right:14px}
 }
+
+/* Developer portfolio theme */
+:root {
+  color-scheme: dark;
+  --paper: #0a1020;
+  --ink: #edf5ff;
+  --muted: #a4b5ce;
+  --line: #2c3d59;
+  --dark: #14223a;
+  --lime: #69e8fc;
+  --mono: "Cascadia Code", ui-monospace, Consolas, monospace;
+}
+body {
+  background-image:
+    radial-gradient(ellipse at 76% 0%, #19284e 0%, transparent 43rem),
+    linear-gradient(#85aaff0a 1px, transparent 1px),
+    linear-gradient(90deg, #85aaff0a 1px, transparent 1px);
+  background-size: auto, 40px 40px, 40px 40px;
+}
+a:focus-visible, summary:focus-visible { outline-color: var(--lime); }
+.skip { color: var(--paper); }
+.brand span { border: 1px solid #3b587a; border-radius: 7px; }
+.top-contact, .skills li { border-radius: 6px; background: #111d33; }
+.top-contact:hover { border-color: var(--lime); }
+h1, h2 {
+  font-family: system-ui, sans-serif;
+  font-weight: 720;
+  letter-spacing: -.065em;
+  line-height: 1.04;
+}
+h1 { font-size: clamp(55px, 7.2vw, 101px); }
+h1 span, .quiet { color: var(--lime); }
+.intro span { background: var(--lime); box-shadow: 0 0 12px #69e8fc80; }
+.button { background: var(--lime); color: #071726; border-radius: 7px; }
+.button:hover { background: #adf4ff; }
+.portrait {
+  background: #131f36;
+  border-color: #385273;
+  border-radius: 10px;
+  transform: none;
+  box-shadow: 12px 12px 0 #152849;
+}
+.portrait img { border-radius: 5px; }
+figcaption { padding: 10px 4px 4px; }
+.research {
+  background: linear-gradient(125deg, #142642, #101a31 70%);
+  border: 1px solid #354f70;
+  border-radius: 12px;
+}
+.band, .directions article { border-color: #3c5474; }
+.research p { color: #c4d4e9; }
+.directions > .label { color: var(--lime); }
+.projects { border: 1px solid var(--line); border-radius: 10px; background: #101a2d; }
+details:last-child { border-bottom: 0; }
+details[open], summary:hover { background: #1a2b47; }
+details:first-child, details:first-child summary { border-radius: 9px 9px 0 0; }
+details:last-child, details:last-child summary { border-radius: 0 0 9px 9px; }
+.number, .toggle { color: var(--lime); }
+.toggle { border-radius: 5px; }
+.skills li { color: #c0e9fa; font-family: var(--mono); }
+.contact {
+  background: linear-gradient(110deg, #172e47, #202447);
+  border: 1px solid #39516f;
+  border-radius: 12px;
+}
+@media (max-width: 560px) {
+  h1 { font-size: clamp(44px, 12vw, 66px); }
+}
